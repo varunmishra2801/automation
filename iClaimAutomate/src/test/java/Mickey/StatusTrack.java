@@ -440,10 +440,11 @@ public class StatusTrack {
 				      rows =driver.findElements(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr"));
 				       System.out.println("No of rows are : " + rows.size());
 				       System.out.println(preauthid + "-" +id);
-				       i = rows.size(); 
+				       i1 = 0;
+				       i1 = rows.size(); 
 // make it ascending by clicking once on response and then pick last...
-				       response = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i+"]/td[6]")).getText();		  
-				       status = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i+"]/td[4]")).getText();		  				
+				       response = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i1+"]/td[6]")).getText();		  
+				       status = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i1+"]/td[4]")).getText();		  				
 				       if(response.equals("")&& status.equals("Claim In Process")) {
 				    	   //don't sort it then
 				       }
@@ -458,8 +459,8 @@ public class StatusTrack {
 							e1.printStackTrace();
 						}
 					  String status = null;String url1 = null; response="";
-					  status = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i+"]/td[4]")).getText();		  
-					  response = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i+"]/td[6]")).getText();		  
+					  status = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i1+"]/td[4]")).getText();		  
+					  response = driver.findElement(By.xpath("//*[@id='ctl00_ContentPlaceHolder1_dg_DashBoard']/tbody/tr["+i1+"]/td[6]")).getText();		  
 					if(!response.equals("")) {	 
 					  String[] splited2 = null;
 						  String[] splited = response.split(" ");
