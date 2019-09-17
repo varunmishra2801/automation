@@ -135,6 +135,7 @@ public class StatusTrack {
 				}
 			    	ChromeOptions options = new ChromeOptions();
 			        options.addArguments("headless");
+		        System.out.println(System.getProperty("user.name"));
 			    System.out.println(os);
 				driver = new ChromeDriver(options);
 
