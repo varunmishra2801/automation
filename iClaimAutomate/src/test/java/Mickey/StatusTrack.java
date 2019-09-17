@@ -427,7 +427,10 @@ public class StatusTrack {
 					}
 					
 					element = driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_txtIntimationNo']"));
-				    element.sendKeys(preauthid);
+					if(preauth != null || i>0) {
+					element.sendKeys(Keys.CONTROL + "a");
+					element.sendKeys(Keys.DELETE);}
+					element.sendKeys(preauthid);
 
 					element = driver.findElement(By.xpath("//input[@id='ctl00_ContentPlaceHolder1_btnSearch']"));
 					element.click();
