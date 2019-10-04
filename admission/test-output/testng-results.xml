@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-10-03T18:02:18Z" name="Default suite" finished-at="2019-10-03T18:05:46Z" duration-ms="207975">
+    <groups>
+    </groups>
+    <test started-at="2019-10-03T18:02:18Z" name="Default test" finished-at="2019-10-03T18:05:46Z" duration-ms="207975">
+      <class name="star.admission.staradmission">
+        <test-method signature="starNewAdmission()[pri:0, instance:star.admission.staradmission@437da279]" started-at="2019-10-03T23:32:18Z" name="starNewAdmission" finished-at="2019-10-03T23:35:46Z" duration-ms="207944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- starNewAdmission -->
+      </class> <!-- star.admission.staradmission -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
