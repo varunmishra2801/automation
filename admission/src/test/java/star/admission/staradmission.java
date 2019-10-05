@@ -212,6 +212,7 @@ try {
 	
 //update api
 		 String id = JOptionPane.showInputDialog("Put claim id");
+		 if(!id.equals(null) && !id.equals("")) {
 			 requestspc = RestAssured.given();
 			  requestspc.header("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
 			  requestspc.multiPart("status", "In Progress");
@@ -219,7 +220,7 @@ try {
 			  requestspc.multiPart("process", "Pa");
 			  requestspc.multiPart("claimid", id);
 			  log(patientid+"-In Progress");
-			  response1 = requestspc.post(url);	
+			  response1 = requestspc.post(url);	}
 			}catch(Exception e) {}
 }
 	
