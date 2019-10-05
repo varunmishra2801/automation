@@ -46,6 +46,8 @@ public class staradmission {
 
 		element = driver.findElement(By.xpath("//*[@id=\'btnLogin\']"));
 		element.click();
+		
+		
 	}
 @Test
 	public void starNewAdmission() {
@@ -74,6 +76,13 @@ public class staradmission {
 			e.printStackTrace();
 		}
 		
+		 requestspc = RestAssured.given();
+		  requestspc.header("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
+		  requestspc.multiPart("status", "Acknowledged");
+		  requestspc.multiPart("refno", patientid); 
+		  requestspc.multiPart("process", "Pa");
+		  log(patientid+"- Acknowledged");
+		  response1 = requestspc.post(url);	
 		
 		String line_treatment; line_treatment = "";
 		String patientName = value.get("PatientName").asText();
@@ -200,11 +209,18 @@ try {
 
 		}}catch(Exception e) {log("issue in doc upload");}
 		
-	}
-//update our API	
-		catch (Exception e) {
-				
-	}
+	
+//update api
+		 String id = JOptionPane.showInputDialog("Put claim id");
+			 requestspc = RestAssured.given();
+			  requestspc.header("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
+			  requestspc.multiPart("status", "In Progress");
+			  requestspc.multiPart("refno", patientid); 
+			  requestspc.multiPart("process", "Pa");
+			  requestspc.multiPart("claimid", id);
+			  log(patientid+"-In Progress");
+			  response1 = requestspc.post(url);	
+			}catch(Exception e) {}
 }
 	
 	public void saveFiles(JsonNode docs, String port) {
