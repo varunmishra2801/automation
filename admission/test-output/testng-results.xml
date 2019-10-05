@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-03T18:02:18Z" name="Default suite" finished-at="2019-10-03T18:05:46Z" duration-ms="207975">
+  <suite name="Default suite" duration-ms="715800" started-at="2019-10-04T12:21:29Z" finished-at="2019-10-04T12:33:24Z">
     <groups>
     </groups>
-    <test started-at="2019-10-03T18:02:18Z" name="Default test" finished-at="2019-10-03T18:05:46Z" duration-ms="207975">
+    <test name="Default test" duration-ms="715800" started-at="2019-10-04T12:21:29Z" finished-at="2019-10-04T12:33:24Z">
       <class name="star.admission.staradmission">
-        <test-method signature="starNewAdmission()[pri:0, instance:star.admission.staradmission@437da279]" started-at="2019-10-03T23:32:18Z" name="starNewAdmission" finished-at="2019-10-03T23:35:46Z" duration-ms="207944" status="PASS">
+        <test-method status="PASS" signature="starNewAdmission()[pri:0, instance:star.admission.staradmission@6356695f]" name="starNewAdmission" duration-ms="715756" started-at="2019-10-04T17:51:29Z" finished-at="2019-10-04T18:03:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- starNewAdmission -->
