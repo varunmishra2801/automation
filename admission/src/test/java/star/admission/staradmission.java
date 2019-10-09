@@ -69,7 +69,20 @@ public class staradmission {
 		try {
 			JsonNode actualObj = mapper.readTree(response1.asString());
 			value = actualObj.get("0");
-			normalStart("https://portal.starhealth.in/hospital/");
+			String portal = value.get("PortalLink").asText(); String purl = null;
+			switch(portal) {
+			case "plus.medibuddy.in/":
+				purl = "https://plus.medibuddy.in";
+			case "www.fhpl.net":
+				purl = "https://epreauth.fhpl.net/Login.aspx";
+			case "portal.starhealth.in":
+				purl = "https://portal.starhealth.in/hospital/";
+			case "":
+				purl = "https://www.icicilombard.com/IL-HEALTH-CARE/Home/Login";
+		    default:
+		    	break;
+			}
+			normalStart(purl);
 			JsonNode username = value.get("PortalUser");
 			JsonNode password = value.get("PortalPass");
 			starHealthLogin(username.asText(), password.asText());
