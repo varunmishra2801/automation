@@ -5,9 +5,14 @@
     <classes>
       <class name="star.admission.staradmission">
         <methods>
-          <include name="starNewAdmission"/>
+          <include name="NewAdmission"/>
         </methods>
       </class> <!-- star.admission.staradmission -->
+      <class name="admission.admission">
+        <methods>
+          <include name="NewAdmission"/>
+        </methods>
+      </class> <!-- admission.admission -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
